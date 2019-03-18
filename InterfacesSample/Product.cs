@@ -23,8 +23,13 @@ namespace InterfacesSample
             if (other == null)
                 return 1;
 
+            //sort by name
+            return this.Name.CompareTo(other.Name);
+
+
             //sort by price
             return this.Price.CompareTo(other.Price);
+
             // If this curr instance comes before "other"
             // Return less than Zero (-1)
             if (this.Price < other.Price)
@@ -37,7 +42,7 @@ namespace InterfacesSample
 
             //Return greater than 0 (1) if "this follows"
             //"other"
-            else (this.Price > other.Price)
+            else //(this.Price > other.Price)
                 return 1;
         }
     }
